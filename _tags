@@ -1,0 +1,2 @@
+true: debug, bin_annot
+true: package(lwt.unix, ocplib-endian)
