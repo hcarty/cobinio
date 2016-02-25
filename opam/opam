@@ -26,6 +26,7 @@ depends: [
   "lwt"
   "oasis" {build & >= "0.4"}
   "ocamlfind" {build}
+  "ocamlbuild" {build}
   "ocplib-endian"
 ]
 available: [ ocaml-version >= "4.02.3" ]
