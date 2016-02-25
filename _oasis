@@ -1,0 +1,20 @@
+OASISFormat:  0.4
+Name:         cobinio
+Version:      0.0.0
+Synopsis:     Cooperative thread friendly mmap-like IO
+Authors:      Hezekiah M. Carty <hez@0ok.org>
+License:      MIT
+Plugins:      META (0.4), DevFiles (0.4)
+BuildTools:   ocamlbuild
+OCamlVersion: >= 4.02.3
+
+Library cobinio
+  Path:           src
+  Modules:        Cobinio
+  BuildDepends:   lwt.unix, ocplib-endian
+  CompiledObject: best
+
+SourceRepository master
+  Type: git
+  Location: https://github.com/hcarty/cobinio.git
+  Browser: https://github.com/hcarty/cobinio
