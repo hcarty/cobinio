@@ -1,0 +1,31 @@
+opam-version: "1.2"
+name: "cobinio"
+version: "0.0.0"
+maintainer: "Hezekiah M. Carty <hez@0ok.org>"
+authors: [ "Hezekiah M. Carty <hez@0ok.org>" ]
+license: "MIT"
+homepage: "https://github.com/hcarty/cobinio"
+dev-repo: "https://github.com/hcarty/cobinio.git"
+bug-reports: "https://github.com/hcarty/cobinio/issues"
+build: [
+  ["oasis" "setup"]
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
+  ["ocaml" "setup.ml" "-build"]
+]
+install: ["ocaml" "setup.ml" "-install"]
+remove: [
+  ["ocamlfind" "remove" "cobinio"]
+]
+build-test: [
+  ["oasis" "setup"]
+  ["ocaml" "setup.ml" "-configure" "--enable-tests"]
+  ["ocaml" "setup.ml" "-build"]
+  ["ocaml" "setup.ml" "-test"]
+]
+depends: [
+  "lwt"
+  "oasis" {build & >= "0.4"}
+  "ocamlfind" {build}
+  "ocplib-endian"
+]
+available: [ ocaml-version >= "4.02.3" ]

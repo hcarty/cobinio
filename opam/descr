@@ -1,0 +1,6 @@
+Cooperative thread friendly mmap-like IO
+mmap-like IO that is safe to use in a cooperative threads environment
+(Lwt)
+
+
+
