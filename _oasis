@@ -2,7 +2,12 @@ OASISFormat:  0.4
 Name:         cobinio
 Version:      0.0.0
 Synopsis:     Cooperative thread friendly mmap-like IO
+Description:  mmap-like IO that is safe to use in a cooperative
+              threads environment (Lwt)
+              .
 Authors:      Hezekiah M. Carty <hez@0ok.org>
+Maintainers:  Hezekiah M. Carty <hez@0ok.org>
+Homepage:     https://github.com/hcarty/cobinio
 License:      MIT
 Plugins:      META (0.4), DevFiles (0.4)
 BuildTools:   ocamlbuild
